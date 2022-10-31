@@ -1,0 +1,15 @@
+[
+  {
+    "author": "Dino",
+    "data": "05/13/2019",
+    "message": "Welcome to the Game Center! The staff hopes you enjoy your stay here.",
+    "stateEdited": true
+  },
+
+  {
+    "author": "Misho",
+    "data": "07/13/2019",
+    "message": "Hey!",
+    "stateEdited": false
+  }
+]

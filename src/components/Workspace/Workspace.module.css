@@ -1,0 +1,236 @@
+.Workspace {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.chatList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  overflow: scroll;
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  background-color: rgb(39, 37, 37);
+}
+
+.bottomBarAvatar {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+}
+
+.bottomBarOnline {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.bottomBarName {
+  line-height: 1.2;
+}
+
+.bottomBarMessage {
+  font-size: 12px;
+  line-height: 1.2;
+  color: gray;
+}
+
+.bottomBarButtonWrapper {
+  display: flex;
+}
+
+.bottomBarButton {
+  border: none;
+  background-color: inherit;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.chatSelector {
+  border-bottom: 2px solid rgb(33, 32, 32);
+  height: 70px;
+}
+
+.preText {
+  color: gray;
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.doorbellItem {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.loungesItem {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.chat {
+  background-color: rgb(66, 62, 62);
+  width: 100%;
+  height: 100%;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  border-bottom: 2px solid rgb(33, 32, 32);
+}
+
+.chatText {
+  margin-right: 710px;
+}
+
+.chatPreText {
+  color: gray;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.chatListBar {
+  padding: 20px;
+}
+
+.chatItem {
+  margin-bottom: 20px;
+}
+
+.chatBtnList {
+  display: flex;
+}
+
+.helpBtnList {
+  display: flex;
+}
+
+.buttonChatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 25px;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border: none;
+  background-color: transparent;
+}
+
+.chatBtnItem,
+.helpBtnItem {
+  margin-right: 15px;
+}
+
+.form {
+  margin-right: 15px;
+}
+
+.chatWrapper {
+  display: flex;
+}
+
+.chatWindow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(66, 62, 62);
+  width: calc(100% - 350px);
+  height: calc(100vh - 70px);
+}
+
+.discordFeaturesList {
+  width: 550px;
+  margin: 0 auto;
+}
+
+.discordFeature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.discordFeatureImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.discordFeatureText {
+  width: 500px;
+}
+
+.txtAccent {
+  font-weight: 700;
+}
+
+.formChat {
+  position: relative;
+}
+
+.formBtnWrapper {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.formBtnList {
+  display: flex;
+}
+
+.formBtnItem {
+  margin-right: 1px;
+}
+
+.chatBtn {
+  border: none;
+  background-color: inherit;
+  width: 35px;
+  height: 35px;
+}
+
+.members {
+  background-color: rgb(33, 32, 32);
+  width: 350px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+}

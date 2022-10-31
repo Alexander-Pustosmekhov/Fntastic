@@ -1,0 +1,131 @@
+.UserLists {
+  padding: 20px;
+}
+
+.botList {
+}
+
+.botTitle {
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.botItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.botAvatar {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.botName {
+  color: lightseagreen;
+  line-height: 1.2;
+}
+
+.bot {
+  background-color: rgb(70, 134, 174);
+  color: #ffffff;
+  padding: 1px 2px;
+  border-radius: 15%;
+}
+
+.botOnline {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.botMessage {
+  color: gray;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.memberAvatar {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.memberOnlineTrue {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.memberOnlineFalse {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.memberItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.memberName {
+  color: orange;
+  line-height: 1.2;
+}
+
+.memberTitle {
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.offlineItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.offlineTitle {
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.offlineAvatar {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.offlineName {
+  color: orange;
+  line-height: 1.2;
+  font-weight: 200;
+}

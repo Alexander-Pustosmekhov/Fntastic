@@ -1,0 +1,39 @@
+.ChoiceWorkspace {
+  width: 100px;
+  height: 100vh;
+  background-color: rgb(33, 32, 32);
+}
+
+.buttonWrapper {
+  width: 50px;
+  margin: 10px auto;
+}
+
+.buttonItem {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.messageCounter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: rgb(66, 62, 62);
+  border-radius: 50%;
+  font-size: 30px;
+}

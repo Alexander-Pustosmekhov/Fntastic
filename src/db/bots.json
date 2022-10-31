@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Dank Memer",
+    "avatar": "D",
+    "message": "Playing pls help",
+    "bot": true,
+    "online": true
+  },
+  {
+    "name": "GamesROB",
+    "avatar": "G",
+    "message": "Playing @GamesROB#3608",
+    "bot": true,
+    "online": true
+  },
+  {
+    "name": "GiveawayBot",
+    "avatar": "G",
+    "message": "Playing https://giveawaybot",
+    "bot": true,
+    "online": true
+  },
+  {
+    "name": "MEE6",
+    "avatar": "M",
+    "message": "Playing pls help",
+    "bot": true,
+    "online": true
+  },
+  {
+    "name": "Welcomer",
+    "avatar": "W",
+    "message": "Playing pls help",
+    "bot": true,
+    "online": true
+  }
+]
