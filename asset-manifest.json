@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Fntastic/static/css/main.1e99ca54.css",
+    "main.js": "/Fntastic/static/js/main.78eebd82.js",
+    "index.html": "/Fntastic/index.html",
+    "main.1e99ca54.css.map": "/Fntastic/static/css/main.1e99ca54.css.map",
+    "main.78eebd82.js.map": "/Fntastic/static/js/main.78eebd82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e99ca54.css",
+    "static/js/main.78eebd82.js"
+  ]
+}
