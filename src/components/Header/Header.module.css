@@ -17,11 +17,6 @@
   align-items: baseline;
 }
 
-.buttonItem {
-  width: 16px;
-  height: 16px;
-}
-
 .buttonItem:not(:last-child) {
   margin-right: 15px;
 }
@@ -37,4 +32,10 @@
   padding: 4px;
   border: none;
   background-color: transparent;
+}
+
+.buttonHeader:hover,
+.buttonHeader:focus {
+  color: white;
+  background-color: gray;
 }

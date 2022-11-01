@@ -1,6 +1,6 @@
 .ChoiceWorkspace {
   width: 100px;
-  height: 100vh;
+  height: calc(100vh - 30px);
   background-color: rgb(33, 32, 32);
 }
 
@@ -36,4 +36,9 @@
   background-color: rgb(66, 62, 62);
   border-radius: 50%;
   font-size: 30px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: gray;
 }

@@ -16,12 +16,17 @@ export default function Header() {
           </button>
         </li>
         <li className={s.buttonItem}>
+          <button type="button" className={s.buttonHeader}>
+            &#215;
+          </button>
+        </li>
+        {/* <li className={s.buttonItem}>
           <button
             type="button"
             className="btn-close btn-close-white"
             aria-label="Закрыть"
           ></button>
-        </li>
+        </li> */}
       </ul>
     </header>
   );

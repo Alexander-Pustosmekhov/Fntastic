@@ -1,6 +1,7 @@
 .Navigation {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
+  height: calc(100vh - 30px);
   background-color: rgb(52, 50, 50);
 }
 

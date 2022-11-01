@@ -14,6 +14,18 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 40px;
+}
+
+.botItem:hover,
+.botItem:focus {
+  background-color: gray;
+}
+
+.botItem:hover .botMessage,
+.botItem:focus .botMessage {
+  color: #ffffff;
 }
 
 .botAvatar {
@@ -91,6 +103,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 40px;
+}
+
+.memberItem:hover,
+.memberItem:focus {
+  background-color: gray;
 }
 
 .memberName {
@@ -107,6 +126,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  padding: 2px;
+  border-radius: 40px;
+}
+
+.offlineItem:hover,
+.offlineItem:focus {
+  background-color: gray;
 }
 
 .offlineTitle {

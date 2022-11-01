@@ -1,7 +1,8 @@
 .Workspace {
   display: flex;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: calc(100vh - 30px);
 }
 
 .chatList {
@@ -9,7 +10,6 @@
   flex-direction: column;
   justify-content: space-between;
   width: 400px;
-  overflow: scroll;
 }
 
 .bottomBar {
@@ -27,6 +27,7 @@
   right: 0;
   width: 40px;
   height: 40px;
+  margin-right: 10px;
   border-radius: 50%;
   background-color: red;
   text-align: center;
@@ -52,19 +53,38 @@
   line-height: 1.2;
   color: gray;
 }
+.bottomBarUser {
+  display: flex;
+  width: 170px;
+}
+
+.bottomBarUser:hover,
+.bottomBarUser:focus {
+  background-color: gray;
+  border-radius: 40px;
+}
 
 .bottomBarButtonWrapper {
   display: flex;
 }
 
 .bottomBarButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
+  border-radius: 50%;
   background-color: inherit;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   margin-right: 10px;
   text-align: center;
   font-size: 25px;
+}
+
+.bottomBarButton:hover,
+.bottomBarButton:focus {
+  background-color: gray;
 }
 
 .chatSelector {
@@ -84,10 +104,22 @@
   padding-left: 10px;
 }
 
+.doorbellItem:hover,
+.doorbellItem:focus {
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
 .infoItem {
   display: flex;
   align-items: center;
   padding-left: 10px;
+}
+
+.infoItem:hover,
+.infoItem:focus {
+  background-color: #ffffff;
+  border-radius: 40px;
 }
 
 .loungesItem {
@@ -96,10 +128,17 @@
   padding-left: 10px;
 }
 
+.loungesItem:hover,
+.loungesItem:focus {
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
 .chat {
   background-color: rgb(66, 62, 62);
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: calc(100vh - 100px);
 }
 
 .chatHeader {
@@ -111,8 +150,16 @@
   border-bottom: 2px solid rgb(33, 32, 32);
 }
 
+.chatMessages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 150px);
+  overflow: scroll;
+}
+
 .chatText {
-  margin-right: 710px;
+  margin-right: 670px;
 }
 
 .chatPreText {
@@ -123,10 +170,27 @@
 
 .chatListBar {
   padding: 20px;
+  overflow: scroll;
+  height: calc(100vh - 160px);
 }
 
 .chatItem {
   margin-bottom: 20px;
+}
+
+.chatListTitle {
+  border-radius: 40px;
+  padding: 5px;
+}
+
+.chatListTitle:hover,
+.chatListTitle:focus {
+  background-color: gray;
+}
+
+.chatName {
+  width: 100%;
+  color: gray;
 }
 
 .chatBtnList {
@@ -142,12 +206,19 @@
   align-items: center;
   justify-content: center;
   color: gray;
+  border-radius: 50%;
   font-size: 25px;
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   padding: 4px;
   border: none;
   background-color: transparent;
+}
+
+.buttonChatHeader:hover,
+.buttonChatHeader:focus {
+  background-color: gray;
+  color: #ffffff;
 }
 
 .chatBtnItem,
@@ -170,7 +241,7 @@
   padding: 20px;
   background-color: rgb(66, 62, 62);
   width: calc(100% - 350px);
-  height: calc(100vh - 70px);
+  height: calc(100vh - 100px);
 }
 
 .discordFeaturesList {
@@ -228,9 +299,14 @@
   height: 35px;
 }
 
+.chatBtn:hover,
+.chatBtn:focus {
+  transform: scale(1.5);
+}
+
 .members {
   background-color: rgb(33, 32, 32);
   width: 350px;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 100px);
   overflow: scroll;
 }
