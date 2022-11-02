@@ -1,0 +1,69 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(85, 81, 81, 0.2);
+}
+
+.modal {
+  position: absolute;
+  bottom: 60px;
+  right: 300px;
+  width: 300px;
+  height: 200px;
+  padding: 30px;
+  border-radius: 40px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: rgb(66, 62, 62);
+}
+
+.buttonClose {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 25px;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.buttonClose:hover,
+.buttonClose:focus {
+  color: white;
+  background-color: gray;
+}
+
+.title {
+  font-size: 25px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.buttonList {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  overflow: scroll;
+}
+
+.button {
+  border: none;
+  margin: 1px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.button:hover,
+.button:focus {
+  background-color: gray;
+}

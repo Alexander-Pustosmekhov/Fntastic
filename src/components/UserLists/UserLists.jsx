@@ -2,8 +2,16 @@ import s from './UserLists.module.css';
 import bots from '../../db/bots.json';
 import members from '../../db/members.json';
 import offline from '../../db/offline.json';
+import { useState } from 'react';
 
 export default function UserLists() {
+  const [showUserData, setShowUserData] = useState(false);
+
+  const handleClick = () => {
+    if (showUserData) setShowUserData(false);
+    if (!showUserData) setShowUserData(true);
+  };
+
   return (
     <ul className={s.UserLists}>
       <li>
@@ -11,7 +19,7 @@ export default function UserLists() {
         <ul className={s.botList}>
           {bots.map(bot => {
             return (
-              <li className={s.botItem} key={bot.name}>
+              <li className={s.botItem} key={bot.name} onClick={handleClick}>
                 <div className={s.botAvatar}>
                   {bot.avatar}
                   <div className={s.botOnline}></div>
@@ -22,6 +30,9 @@ export default function UserLists() {
                   </p>
                   <p className={s.botMessage}>{bot.message}</p>
                 </div>
+                {showUserData && (
+                  <div className={s.contactInformation}>QWE</div>
+                )}
               </li>
             );
           })}

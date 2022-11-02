@@ -1,7 +1,89 @@
 import s from './Workspace.module.css';
 import UserLists from 'components/UserLists';
+import ModalSettings from 'components/modal/ModalSettings';
+import ModalUser from 'components/modal/ModalUser';
+import ModalHelp from 'components/modal/ModalHelp';
+import ModalSupport from 'components/modal/ModalSupport';
+import ModalPresents from 'components/modal/ModalPresents';
+import ModalGifs from 'components/modal/ModalGifs';
+import ModalEmoji from 'components/modal/ModalEmoji';
+import { useState } from 'react';
+import classNames from 'classnames';
 
 export default function Workspace(props) {
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [showUserModal, setShowUserModal] = useState(false);
+  const [showHelpModal, setShowHelpModal] = useState(false);
+  const [showSupportModal, setShowSupportModal] = useState(false);
+  const [showPresentsModal, setShowPresentsModal] = useState(false);
+  const [showGifsModal, setShowGifsModal] = useState(false);
+  const [showEmojiModal, setShowEmojiModal] = useState(false);
+  const [microphoneOn, setMicrophoneOn] = useState(true);
+  const [voiceOn, setVoiceOn] = useState(true);
+  const [noticesOn, setNoticesOn] = useState(false);
+  const [fixOn, setFixOn] = useState(false);
+  const [groupOn, setGroupOn] = useState(false);
+
+  const handleClickSettings = () => {
+    if (showSettingsModal) setShowSettingsModal(false);
+    if (!showSettingsModal) setShowSettingsModal(true);
+  };
+
+  const handleClickUser = () => {
+    if (showUserModal) setShowUserModal(false);
+    if (!showUserModal) setShowUserModal(true);
+  };
+
+  const handleClickHelp = () => {
+    if (showHelpModal) setShowHelpModal(false);
+    if (!showHelpModal) setShowHelpModal(true);
+  };
+
+  const handleClickSupport = () => {
+    if (showSupportModal) setShowSupportModal(false);
+    if (!showSupportModal) setShowSupportModal(true);
+  };
+
+  const handleClickPresents = () => {
+    if (showPresentsModal) setShowPresentsModal(false);
+    if (!showPresentsModal) setShowPresentsModal(true);
+  };
+
+  const handleClickGifs = () => {
+    if (showGifsModal) setShowGifsModal(false);
+    if (!showGifsModal) setShowGifsModal(true);
+  };
+
+  const handleClickEmoji = () => {
+    if (showEmojiModal) setShowEmojiModal(false);
+    if (!showEmojiModal) setShowEmojiModal(true);
+  };
+
+  const handleClickMicrophone = () => {
+    if (microphoneOn) setMicrophoneOn(false);
+    if (!microphoneOn) setMicrophoneOn(true);
+  };
+
+  const handleClickVoice = () => {
+    if (voiceOn) setVoiceOn(false);
+    if (!voiceOn) setVoiceOn(true);
+  };
+
+  const handleClickNotices = () => {
+    if (noticesOn) setNoticesOn(false);
+    if (!noticesOn) setNoticesOn(true);
+  };
+
+  const handleClickFix = () => {
+    if (fixOn) setFixOn(false);
+    if (!fixOn) setFixOn(true);
+  };
+
+  const handleClickGroup = () => {
+    if (groupOn) setGroupOn(false);
+    if (!groupOn) setGroupOn(true);
+  };
+
   return (
     <div className={s.Workspace}>
       <div className={s.chatList}>
@@ -21,7 +103,7 @@ export default function Workspace(props) {
             <li className={s.chatItem}>
               <p className={s.chatListTitle}>DOORBELL</p>
               <ul className={s.doorbellList}>
-                <li className={s.doorbellItem}>
+                <li className={classNames(s.doorbellItem, s.active)}>
                   <span className={s.preText}>#</span>
                   <p className={s.chatName}>welcome</p>
                 </li>
@@ -126,25 +208,41 @@ export default function Workspace(props) {
               L<div className={s.bottomBarOnline}></div>
             </div>
             <div>
-              <div>
+              <div onClick={handleClickUser}>
                 <p className={s.bottomBarName}>LO4D.com</p>
                 <p className={s.bottomBarMessage}>#3212</p>
               </div>
             </div>
           </div>
           <ul className={s.bottomBarButtonWrapper}>
-            <li>
-              <button className={s.bottomBarButton} type="button">
+            <li className={s.bottomBarButtonItem}>
+              <button
+                className={s.bottomBarButton}
+                type="button"
+                onClick={handleClickMicrophone}
+              >
                 &#127908;
               </button>
+              {!microphoneOn && (
+                <div className={s.preBottomBarButton}>&#215;</div>
+              )}
             </li>
-            <li>
-              <button className={s.bottomBarButton} type="button">
+            <li className={s.bottomBarButtonItem}>
+              <button
+                className={s.bottomBarButton}
+                type="button"
+                onClick={handleClickVoice}
+              >
                 &#127911;
               </button>
+              {!voiceOn && <div className={s.preBottomBarButton}>&#215;</div>}
             </li>
             <li>
-              <button className={s.bottomBarButton} type="button">
+              <button
+                className={s.bottomBarButton}
+                type="button"
+                onClick={handleClickSettings}
+              >
                 &#9881;
               </button>
             </li>
@@ -157,18 +255,37 @@ export default function Workspace(props) {
           <p className={s.chatText}>welcome</p>
           <ul className={s.chatBtnList}>
             <li className={s.chatBtnItem}>
-              <button type="button" className={s.buttonChatHeader}>
+              <button
+                type="button"
+                className={s.buttonChatHeader}
+                onClick={handleClickNotices}
+              >
                 &#128276;
+                {noticesOn && (
+                  <div className={s.preButtonChatHeader}>&#10003;</div>
+                )}
               </button>
             </li>
             <li className={s.chatBtnItem}>
-              <button type="button" className={s.buttonChatHeader}>
+              <button
+                type="button"
+                className={s.buttonChatHeader}
+                onClick={handleClickFix}
+              >
                 &#128204;
+                {fixOn && <div className={s.preButtonChatHeader}>&#10003;</div>}
               </button>
             </li>
             <li className={s.chatBtnItem}>
-              <button type="button" className={s.buttonChatHeader}>
+              <button
+                type="button"
+                className={s.buttonChatHeader}
+                onClick={handleClickGroup}
+              >
                 &#128101;
+                {groupOn && (
+                  <div className={s.preButtonChatHeader}>&#10003;</div>
+                )}
               </button>
             </li>
           </ul>
@@ -182,12 +299,20 @@ export default function Workspace(props) {
           </form>
           <ul className={s.helpBtnList}>
             <li className={s.helpBtnItem}>
-              <button type="button" className={s.buttonChatHeader}>
+              <button
+                type="button"
+                className={s.buttonChatHeader}
+                onClick={handleClickSupport}
+              >
                 &#64;
               </button>
             </li>
             <li className={s.helpBtnItem}>
-              <button type="button" className={s.buttonChatHeader}>
+              <button
+                type="button"
+                className={s.buttonChatHeader}
+                onClick={handleClickHelp}
+              >
                 &#63;
               </button>
             </li>
@@ -243,17 +368,29 @@ export default function Workspace(props) {
                 <div className={s.formBtnWrapper}>
                   <ul className={s.formBtnList}>
                     <li className={s.formBtnItem}>
-                      <button type="button" className={s.chatBtn}>
+                      <button
+                        type="button"
+                        className={s.chatBtn}
+                        onClick={handleClickPresents}
+                      >
                         &#127873;
                       </button>
                     </li>
                     <li className={s.formBtnItem}>
-                      <button type="button" className={s.chatBtn}>
+                      <button
+                        type="button"
+                        className={s.chatBtn}
+                        onClick={handleClickGifs}
+                      >
                         GIF
                       </button>
                     </li>
                     <li className={s.formBtnItem}>
-                      <button type="button" className={s.chatBtn}>
+                      <button
+                        type="button"
+                        className={s.chatBtn}
+                        onClick={handleClickEmoji}
+                      >
                         &#128512;
                       </button>
                     </li>
@@ -267,6 +404,13 @@ export default function Workspace(props) {
           </div>
         </div>
       </div>
+      {showSettingsModal && <ModalSettings closeModal={handleClickSettings} />}
+      {showUserModal && <ModalUser closeModal={handleClickUser} />}
+      {showHelpModal && <ModalHelp closeModal={handleClickHelp} />}
+      {showSupportModal && <ModalSupport closeModal={handleClickSupport} />}
+      {showPresentsModal && <ModalPresents closeModal={handleClickPresents} />}
+      {showGifsModal && <ModalGifs closeModal={handleClickGifs} />}
+      {showEmojiModal && <ModalEmoji closeModal={handleClickEmoji} />}
     </div>
   );
 }

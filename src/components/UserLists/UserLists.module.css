@@ -67,6 +67,11 @@
   line-height: 1.2;
 }
 
+.contactInformation {
+  /* position: absolute;
+  bottom: -20px; */
+}
+
 .memberAvatar {
   position: relative;
   width: 30px;

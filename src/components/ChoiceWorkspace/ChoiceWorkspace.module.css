@@ -36,9 +36,15 @@
   background-color: rgb(66, 62, 62);
   border-radius: 50%;
   font-size: 30px;
+  transition: transform 1s;
 }
 
 .button:hover,
 .button:focus {
   background-color: gray;
+  transform: scale(1.3);
+}
+
+.active {
+  background-color: purple;
 }

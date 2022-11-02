@@ -1,0 +1,75 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(85, 81, 81, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  width: 300px;
+  height: 250px;
+  padding: 30px;
+  border-radius: 40px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: rgb(66, 62, 62);
+}
+
+.buttonClose {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 25px;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.buttonClose:hover,
+.buttonClose:focus {
+  color: white;
+  background-color: gray;
+}
+
+.title {
+  font-size: 25px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.buttonList {
+  text-align: left;
+}
+
+.button {
+  border: none;
+  margin-bottom: 3px;
+  background-color: gray;
+  border-radius: 40px;
+  width: 100%;
+}
+
+.button:hover,
+button:focus {
+  color: #fff;
+}
