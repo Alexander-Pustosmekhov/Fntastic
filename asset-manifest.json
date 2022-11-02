@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Fntastic/static/css/main.6aef734e.css",
-    "main.js": "/Fntastic/static/js/main.46d74cb2.js",
+    "main.css": "/Fntastic/static/css/main.8703df80.css",
+    "main.js": "/Fntastic/static/js/main.1f42e72a.js",
     "index.html": "/Fntastic/index.html",
-    "main.6aef734e.css.map": "/Fntastic/static/css/main.6aef734e.css.map",
-    "main.46d74cb2.js.map": "/Fntastic/static/js/main.46d74cb2.js.map"
+    "main.8703df80.css.map": "/Fntastic/static/css/main.8703df80.css.map",
+    "main.1f42e72a.js.map": "/Fntastic/static/js/main.1f42e72a.js.map"
   },
   "entrypoints": [
-    "static/css/main.6aef734e.css",
-    "static/js/main.46d74cb2.js"
+    "static/css/main.8703df80.css",
+    "static/js/main.1f42e72a.js"
   ]
 }
