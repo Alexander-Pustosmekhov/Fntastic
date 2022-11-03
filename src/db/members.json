@@ -1,7 +1,7 @@
 [
-  { "name": "assley", "avatar": "a", "online": false },
-  { "name": "Austin", "avatar": "A", "online": false },
-  { "name": "LingLingPhoenix", "avatar": "L", "online": false },
-  { "name": "LO4D.com", "avatar": "L", "online": true },
-  { "name": "person", "avatar": "p", "online": false }
+  { "id": 6, "name": "assley", "avatar": "a", "online": false },
+  { "id": 7, "name": "Austin", "avatar": "A", "online": false },
+  { "id": 8, "name": "LingLingPhoenix", "avatar": "L", "online": false },
+  { "id": 9, "name": "LO4D.com", "avatar": "L", "online": true },
+  { "id": 10, "name": "person", "avatar": "p", "online": false }
 ]

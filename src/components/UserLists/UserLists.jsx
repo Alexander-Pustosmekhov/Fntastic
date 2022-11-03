@@ -6,10 +6,20 @@ import { useState } from 'react';
 
 export default function UserLists() {
   const [showUserData, setShowUserData] = useState(false);
+  const [userDataId, setUserDataId] = useState(null);
 
-  const handleClick = () => {
-    if (showUserData) setShowUserData(false);
-    if (!showUserData) setShowUserData(true);
+  const handleClick = e => {
+    const currentUser = e.currentTarget.getAttribute('dataId');
+    const userRef = document.querySelector(`li[dataid="${currentUser}"]`);
+    if (!userRef.classList.contains('.active')) {
+      userRef.classList.add('.active');
+      setShowUserData(true);
+      setUserDataId(currentUser);
+    } else {
+      userRef.classList.remove('.active');
+      setShowUserData(false);
+      setUserDataId(null);
+    }
   };
 
   return (
@@ -19,7 +29,12 @@ export default function UserLists() {
         <ul className={s.botList}>
           {bots.map(bot => {
             return (
-              <li className={s.botItem} key={bot.name} onClick={handleClick}>
+              <li
+                className={s.botItem}
+                dataid={bot.id}
+                key={bot.name}
+                onClick={handleClick}
+              >
                 <div className={s.botAvatar}>
                   {bot.avatar}
                   <div className={s.botOnline}></div>
@@ -30,8 +45,8 @@ export default function UserLists() {
                   </p>
                   <p className={s.botMessage}>{bot.message}</p>
                 </div>
-                {showUserData && (
-                  <div className={s.contactInformation}>QWE</div>
+                {showUserData && Number(userDataId) === bot.id && (
+                  <div className={s.contactInformation}>current</div>
                 )}
               </li>
             );
@@ -43,7 +58,12 @@ export default function UserLists() {
         <ul>
           {members.map(member => {
             return (
-              <li className={s.memberItem} key={member.name}>
+              <li
+                className={s.memberItem}
+                dataid={member.id}
+                key={member.name}
+                onClick={handleClick}
+              >
                 <div className={s.memberAvatar}>
                   {member.avatar}
                   <div
@@ -53,6 +73,9 @@ export default function UserLists() {
                   ></div>
                 </div>
                 <p className={s.memberName}>{member.name}</p>
+                {showUserData && Number(userDataId) === member.id && (
+                  <div className={s.contactInformation}>current</div>
+                )}
               </li>
             );
           })}
@@ -63,9 +86,17 @@ export default function UserLists() {
         <ul>
           {offline.map(user => {
             return (
-              <li className={s.offlineItem} key={offline.name}>
+              <li
+                className={s.offlineItem}
+                dataid={user.id}
+                key={offline.name}
+                onClick={handleClick}
+              >
                 <div className={s.offlineAvatar}>{user.avatar}</div>
                 <p className={s.offlineName}>{user.name}</p>
+                {showUserData && Number(userDataId) === user.id && (
+                  <div className={s.contactInformation}>current</div>
+                )}
               </li>
             );
           })}

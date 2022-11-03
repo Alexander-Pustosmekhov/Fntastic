@@ -68,8 +68,10 @@
 }
 
 .contactInformation {
-  /* position: absolute;
-  bottom: -20px; */
+  background-color: black;
+  margin-left: 20px;
+  padding: 2px 5px;
+  border-radius: 40px;
 }
 
 .memberAvatar {
@@ -159,4 +161,8 @@
   color: orange;
   line-height: 1.2;
   font-weight: 200;
+}
+
+.active {
+  background-color: red;
 }
